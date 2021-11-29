@@ -1,15 +1,11 @@
 package kt.grpc.parser
 
+import io.github.petertrr.diffutils.diff
 import kt.grpc.parser.lexer.Proto3Lexer
 import kt.grpc.parser.lexer.Token
-import org.junit.jupiter.api.Test
-import java.io.FileNotFoundException
-import kotlin.streams.toList
-
-fun readResource(path: String): String {
-    val stream =  LexerTest::class.java.getResourceAsStream(path) ?: throw FileNotFoundException("something")
-    return stream.bufferedReader().lines().toList().joinToString("\n")
-}
+import testing.readResource
+import kotlin.test.Test
+import kotlin.test.expect
 
 class LexerTest {
 
@@ -53,7 +49,8 @@ class LexerTest {
         val golden = readResource("${protoName}.tokens").trim()
         val tokens = Proto3Lexer.lex(content)
         val serialized = serialize(tokens).trim()
-        assert(serialized == golden)
+        val diff = diff(serialized, golden, null)
+        expect(true, diff.toString()) { diff.deltas.size == 0 }
     }
 
     private fun serialize(tokens: List<Token>): String {

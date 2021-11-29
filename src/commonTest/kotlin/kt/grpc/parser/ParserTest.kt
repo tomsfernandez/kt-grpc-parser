@@ -1,12 +1,14 @@
 package kt.grpc.parser
 
+import io.github.petertrr.diffutils.diff
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.modules.SerializersModule
 import kotlinx.serialization.modules.polymorphic
 import kotlinx.serialization.modules.subclass
-import kt.grpc.parser.lexer.Proto3Lexer
-import org.junit.jupiter.api.Test
+import testing.readResource
+import kotlin.test.Test
+import kotlin.test.expect
 
 class ParserTest {
 
@@ -63,6 +65,7 @@ class ParserTest {
         val golden = readResource("${protoName}.ast.json").trim()
         val doc = Proto3Parser.parse(content)
         val serialized = json.encodeToString(doc)
-        assert(serialized == golden)
+        val diff = diff(serialized, golden, null)
+        expect(true, diff.toString()) { diff.deltas.size == 0 }
     }
 }

@@ -52,7 +52,7 @@ val floatLit = "^(inf|nan)".or(
 )
 val boolLit = RegexLexer("^true", BOOL_LIT).or("^false", BOOL_LIT).named("BoolLit")
 val quote = RegexLexer("^['|\"]", QUOTE)
-val charEscape = RegexLexer("^\\[Abfnrtv\\'\"]", ANONYMOUS)
+val charEscape = RegexLexer("^\\\\[Abfnrtv]", ANONYMOUS)
 val octEscape = "^\\\\".and(octalDigit).and(octalDigit).and(octalDigit)
 val hexExcape = "^\\\\[xX]".and(hexDigit).and(hexDigit)
 val charValue = hexExcape.or(octEscape).or(charEscape).or("""^[^\\0\n\\]""")

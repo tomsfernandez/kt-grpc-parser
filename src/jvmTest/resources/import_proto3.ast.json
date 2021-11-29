@@ -1,0 +1,15 @@
+{
+  "syntax": {
+    "version": {
+      "value": "proto3"
+    }
+  },
+  "nodes": [
+    {
+      "type": "Public",
+      "path": {
+        "value": "\"other.proto\""
+      }
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+Token(type=IDENT, from=0, to=6)
+Token(type=WHITESPACE, from=6, to=7)
+Token(type=EQUALS, from=7, to=8)
+Token(type=WHITESPACE, from=8, to=9)
+Token(type=STR_LIT, from=9, to=17)
+Token(type=END_STATEMENT, from=17, to=18)

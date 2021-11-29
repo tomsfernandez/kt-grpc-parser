@@ -1,0 +1,37 @@
+{
+  "syntax": {
+    "version": {
+      "value": "proto3"
+    }
+  },
+  "nodes": [
+    {
+      "type": "kt.grpc.parser.Service",
+      "name": {
+        "value": "SearchService"
+      },
+      "nodes": [
+        {
+          "type": "kt.grpc.parser.Rpc",
+          "name": {
+            "value": "Search"
+          },
+          "request": {
+            "isStream": false,
+            "requestType": {
+              "value": "SearchRequest"
+            }
+          },
+          "response": {
+            "isStream": false,
+            "requestType": {
+              "value": "SearchResponse"
+            }
+          },
+          "options": [
+          ]
+        }
+      ]
+    }
+  ]
+}

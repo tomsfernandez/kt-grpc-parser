@@ -1,0 +1,50 @@
+{
+  "syntax": {
+    "version": {
+      "value": "proto3"
+    }
+  },
+  "nodes": [
+    {
+      "type": "kt.grpc.parser.EnumNode",
+      "name": {
+        "value": "EnumAllowingAlias"
+      },
+      "options": [
+        {
+          "name": {
+            "value": "allow_alias"
+          },
+          "value": {
+            "value": "true"
+          }
+        }
+      ],
+      "fields": [
+        {
+          "options": [
+          ],
+          "value": 0
+        },
+        {
+          "options": [
+          ],
+          "value": 1
+        },
+        {
+          "options": [
+            {
+              "name": {
+                "value": "(custom_option)"
+              },
+              "value": {
+                "value": "\"hello world\""
+              }
+            }
+          ],
+          "value": 2
+        }
+      ]
+    }
+  ]
+}

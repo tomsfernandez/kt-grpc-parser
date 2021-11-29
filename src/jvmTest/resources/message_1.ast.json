@@ -1,0 +1,65 @@
+{
+  "syntax": {
+    "version": {
+      "value": "proto3"
+    }
+  },
+  "nodes": [
+    {
+      "type": "kt.grpc.parser.Message",
+      "name": {
+        "value": "Outer"
+      },
+      "nodes": [
+        {
+          "type": "kt.grpc.parser.Option",
+          "name": {
+            "value": "(my_option).a"
+          },
+          "value": {
+            "value": "true"
+          }
+        },
+        {
+          "type": "kt.grpc.parser.Message",
+          "name": {
+            "value": "Inner"
+          },
+          "nodes": [
+            {
+              "type": "kt.grpc.parser.NormalField",
+              "fieldType": {
+                "value": "int64"
+              },
+              "number": {
+                "value": 1
+              },
+              "name": {
+                "value": "ival"
+              },
+              "options": [
+              ]
+            }
+          ]
+        },
+        {
+          "type": "kt.grpc.parser.MapField",
+          "keyType": {
+            "value": "int32"
+          },
+          "valueType": {
+            "value": "string"
+          },
+          "number": {
+            "value": 2
+          },
+          "name": {
+            "value": "my_map"
+          },
+          "options": [
+          ]
+        }
+      ]
+    }
+  ]
+}

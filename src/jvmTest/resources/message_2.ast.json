@@ -1,0 +1,59 @@
+{
+  "syntax": {
+    "version": {
+      "value": "proto3"
+    }
+  },
+  "nodes": [
+    {
+      "type": "kt.grpc.parser.Message",
+      "name": {
+        "value": "SearchRequest"
+      },
+      "nodes": [
+        {
+          "type": "kt.grpc.parser.NormalField",
+          "fieldType": {
+            "value": "string"
+          },
+          "number": {
+            "value": 1
+          },
+          "name": {
+            "value": "query"
+          },
+          "options": [
+          ]
+        },
+        {
+          "type": "kt.grpc.parser.NormalField",
+          "fieldType": {
+            "value": "int32"
+          },
+          "number": {
+            "value": 2
+          },
+          "name": {
+            "value": "page_number"
+          },
+          "options": [
+          ]
+        },
+        {
+          "type": "kt.grpc.parser.NormalField",
+          "fieldType": {
+            "value": "int32"
+          },
+          "number": {
+            "value": 3
+          },
+          "name": {
+            "value": "result_per_page"
+          },
+          "options": [
+          ]
+        }
+      ]
+    }
+  ]
+}
